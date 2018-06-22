@@ -15,10 +15,17 @@ def findMin1(nums):
     return min(nums)
 
 def findMin2(nums):
-    max = 0
+    min = float('inf')
     for num in nums:
-        if num > max:
-            max = num
-    return max
+        if num < min:
+            min = num
+    return min
+
+if __name__ == '__main__':
+    nums = [1,2,3,4,77,8]
+    min1 = findMin1(nums)
+    print("the min number in list is %d", min1)
+    min2 = findMin1(nums)
+    print("the min number in list is %d", min2)
 
 
