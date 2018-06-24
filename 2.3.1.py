@@ -19,6 +19,9 @@ timeit 模块就 将测量运行这个语句一定次数多花费的时间。如
 你也可以在 timeit 中附上一个 名叫 number 的参数，这样你就可以指定程序被执行的次数。
 下图将展示对我们的每一个程序执行 1000 次，分别需要花费的时间。
 """
+'''
+下面的代码用于检查list各种操作的耗时
+'''
 
 from timeit import Timer
 
@@ -49,3 +52,11 @@ print('concat', t3.timeit(number=1000), 'milliseconds')
 
 t4 = Timer('test4()', 'from __main__ import test4')
 print('concat', t4.timeit(number=1000), 'milliseconds')
+
+'''
+输出：
+concat 1.20811295509 milliseconds
+concat 0.0791969299316 milliseconds
+concat 0.0366969108582 milliseconds
+concat 0.00981211662292 milliseconds
+'''
